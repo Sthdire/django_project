@@ -2,3 +2,9 @@
     margin: 0;
     padding: 0;
 }
+.intro{
+    background: url("../img/front_a.jpg")center no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
