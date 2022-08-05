@@ -11,6 +11,3 @@ urlpatterns += [
     path('accounts/', include('django.contrib.auth.urls')),
 ]
 
-urlpatterns += [
-    path('/accounts/logout/', views.logout_view),
-]
