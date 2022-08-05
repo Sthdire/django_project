@@ -45,3 +45,16 @@ h1,h2,h3,h4,h5,h6{
 .nav{
     text-transform: uppercase;
 }
+.nav__link{
+    display: inline-block;
+    vertical-align:top;
+    text-align: right;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+
+    transition: color .3s linear;
+}
+.nav__link:hover{
+    color: black;
+}
