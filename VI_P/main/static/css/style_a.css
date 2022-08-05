@@ -27,20 +27,18 @@ h1,h2,h3,h4,h5,h6{
     -webkit-background-size: cover;
 }
 .header__inner{
-    position: absolute;
     display: flex;
     justify-content: space-between;
 }
 .header{
-    position: absolute;
     width: 100%;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
 }
 
 .logo{
     font-size: 70px;
+    position: absolute;
+    margin: 15px 130px;
 }
 .nav{
     text-transform: uppercase;
@@ -52,7 +50,7 @@ h1,h2,h3,h4,h5,h6{
     /*margin: 0 15px;*/
     color: #fff;
     text-decoration: none;
-    margin:  37px 15px;
+    margin:  50px 15px;
 
     transition: color .3s linear;
 }
@@ -60,11 +58,11 @@ h1,h2,h3,h4,h5,h6{
     color: black;
 }
 .imLogo{
-    background: url("https://www.roscosmos.ru/media/files/identity/roscosmos-logo-main.png");
-    display: block;
+    background: url("../img/cake.png");
     background-size: 95px 88px;
     width: 10px;
     height: 20px;;
     padding: 40px;
-    margin:12px 10px;
+    margin: 20px 15px;
+
 }
