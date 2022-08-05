@@ -16,10 +16,9 @@
 <body>
 <div class="header">
         <div class="container">
-
             <div class="header__inner">
                 <a class="imLogo" href="/"></a>
-                <div class="logo">Montherat</div>
+
                 <div class="nav">
                     <a class="nav__link" href="/profile">Profile</a>
                     <a class="nav__link" href="/background">Background</a>
@@ -32,20 +31,42 @@
     <div class="intro">
         <div class="container">
             <div class="intro__inner">
+                <div class="logo" >Montherat</div>
                 <div class="el"></div>
+
             </div>
         </div>
     </div>
+<svg id="demo-svg" width="800" height="600">
+    <path fill="none" d="M 300 300 Q 300 400 450 400 L 650 400 Q 800 400 800 300 "></path>
+</svg>
 <script>
+    let path = anime.path('#demo-svg path')
+
     anime({
-  targets: '.el',
-  translateX: 215,
-  direction: 'alternate',
-  loop: true,
-  duration: 2500,
-  easing: 'easeInOutSine'
+        targets: '.el',
+        translateX: path('x'),
+        translateY: path('y'),
+        rotate: path('angle'),
+        easing: 'linear',
+        duration: 2000,
+        direction: 'alternate',
+        loop: true
 });
 </script>
+
+<script>
+
+    var colorsExamples = anime.timeline({
+  endDelay: 1000,
+  easing: 'easeInOutQuad',
+  direction: 'alternate',
+  loop: true
+})
+    .add({ targets: '.logo',  color: 'rgb(255,255,255)' }, 0)
+</script>
+
+
 
 </body>
 </html>

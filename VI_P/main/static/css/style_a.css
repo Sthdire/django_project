@@ -36,9 +36,13 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .logo{
-    font-size: 70px;
+    font-size: 110px;
     position: absolute;
-    margin: 15px 130px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
 }
 .nav{
     text-transform: uppercase;
@@ -73,6 +77,8 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     margin: 65px 195px;
     border-radius: 50%;
+    top: 20%;
+    left: 18%;
 
 }
 .link__text{
