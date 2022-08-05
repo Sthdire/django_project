@@ -66,3 +66,12 @@ h1,h2,h3,h4,h5,h6{
     margin: 20px 15px;
 
 }
+.el{
+    background: #79aec8;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin: 65px 195px;
+    border-radius: 50%;
+
+}
