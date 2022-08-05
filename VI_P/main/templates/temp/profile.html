@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/style_a.css' %}">
+    <script src="{% static '/scripts/anime.min.js' %}"></script>
     <title>Document</title>
     <style>
 
@@ -24,7 +25,6 @@
             <a class="imLogo" href="/"></a>
             <div class="logo">Montherat</div>
             <div class="nav">
-                <a class="nav__link" href="/profile">Profile</a>
                 <a class="nav__link" href="/background">Background</a>
                 <a class="nav__link" href="/login">Sign in</a>
                 <a class="nav__link" href="/registration">Sign up</a>
@@ -35,10 +35,20 @@
     <div class="intro">
         <div class="container">
             <div class="intro__inner">
+                <div class="el"></div>
             </div>
         </div>
     </div>
-
+<script>
+    anime({
+  targets: '.el',
+  translateX: 215,
+  direction: 'alternate',
+  loop: true,
+  duration: 2500,
+  easing: 'easeInOutSine'
+});
+</script>
 
 </body>
 </html>
