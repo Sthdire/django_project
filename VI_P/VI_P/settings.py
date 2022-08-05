@@ -122,4 +122,3 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "VI_P/main/static")
 STATICFILES_DIRS = [
     os.path.join(os.path.dirname(BASE_DIR), "static")
 ]
-AUTH_USER_MODEL = 'main.User'
