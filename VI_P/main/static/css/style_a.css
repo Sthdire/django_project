@@ -37,6 +37,8 @@ h1,h2,h3,h4,h5,h6{
 
 .logo{
     font-size: 70px;
+    position: absolute;
+    margin: 15px 130px;
 }
 .nav{
     text-transform: uppercase;
@@ -48,7 +50,7 @@ h1,h2,h3,h4,h5,h6{
     /*margin: 0 15px;*/
     color: #fff;
     text-decoration: none;
-    margin:  30px 15px;
+    margin:  50px 15px;
 
     transition: color .3s linear;
 }
