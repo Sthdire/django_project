@@ -8,7 +8,7 @@
 }
 .container{
     width: 100%;
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 h1,h2,h3,h4,h5,h6{
@@ -65,14 +65,4 @@ h1,h2,h3,h4,h5,h6{
     padding: 40px;
     margin: 20px 15px;
 
-}
-.el{
-    background: #79aec8;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    margin: 65px 195px;
-    border-radius: 50%;
-=======
->>>>>>> origin/main
 }
