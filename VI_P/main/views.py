@@ -10,8 +10,3 @@ def profile_render(request):
 def background_render(request):
     return render(request, 'temp/background.html')
 
-def login(request):
-    return render(request, 'temp/login.html')
-
-def reg(request):
-    return render(request, 'temp/reg.html')

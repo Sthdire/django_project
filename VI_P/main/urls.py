@@ -1,10 +1,16 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
     path('', views.main_render),
     path('profile', views.profile_render),
     path('background', views.background_render),
-    path('login', views.login),
-    path('registration', views.reg)
+]
+# Add Django site authentication urls (for login, logout, password management)
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
+
+urlpatterns += [
+    path('/accounts/logout/', views.logout_view),
 ]
