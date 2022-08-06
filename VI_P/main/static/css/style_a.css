@@ -26,6 +26,17 @@ h1,h2,h3,h4,h5,h6{
     background-size: cover;
     -webkit-background-size: cover;
 }
+.intro__inner{
+    max-width: 750px;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: 400px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}
 .header__inner{
     display: flex;
     justify-content: space-between;
@@ -75,10 +86,8 @@ h1,h2,h3,h4,h5,h6{
     width: 35px;
     height: 35px;
     position: absolute;
-    margin: 65px 195px;
     border-radius: 50%;
-    top: 13%;
-    left: 298px;
+
 
 }
 .link__text{
@@ -92,6 +101,28 @@ h1,h2,h3,h4,h5,h6{
     transition: color .3s linear;
 }
 .nav__link:hover{
-    color: rgba(0, 0, 0, 0.4);;
+    color: rgba(0, 0, 0, 0.4);
 }
+.back__header{
+    background:rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height:42px;
+    position: absolute;
+    top: 100%;
+    transform: translate(0, -100%)
+}
+.back__header__inner{
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, 0 )
+
+}
+
+
+
 
