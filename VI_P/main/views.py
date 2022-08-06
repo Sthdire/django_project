@@ -1,5 +1,12 @@
+from django.contrib import messages
+from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from .forms import UserRegistrationForm
+from .admin import registrations
+
+
+
+
 
 
 def main_render(request):
@@ -15,15 +22,24 @@ def background_render(request):
 
 
 def registration(request):
-    user_form = UserRegistrationForm
-    if request.method == 'POST':
-        user_form = user_form(request.POST)
-        if user_form.is_valid():
-            # Create a new user object but avoid saving it yet
-            new_user = user_form.save(commit=False)
-            # Save the User object
-            new_user.save()
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        registrations(username=username, password=password)
+    else:
+        return render(request, 'auth/reg.html', {})
+
+
+def login_page(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
             return redirect('/')
         else:
-            user_form = UserRegistrationForm()
-    return render(request, 'registration/reg.html', context={'user_form': user_form})
+            messages.success(request, "error logging, try again")
+            return redirect('/login')
+    else:
+        return render(request, 'auth/login.html', {})

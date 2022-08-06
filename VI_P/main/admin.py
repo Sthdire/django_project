@@ -6,10 +6,7 @@ from django.contrib import admin
 class PersonAdmin(admin.ModelAdmin):
     pass
 
-def registration(username, email, password, first_name, last_name):
+def registrations(username, password):
 
-    user = User.objects.create_user(username=username, email=email, password=password)
-
-    user.first_name = first_name
-    user.last_name = last_name
+    user = User.objects.create_user(username=username, password=password)
     user.save()
