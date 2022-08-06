@@ -22,6 +22,39 @@ h1,h2,h3,h4,h5,h6{
 *:after{
     box-sizing: border-box;
 }
+
+
+.header{
+    width: 100%;
+    position: absolute;
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.imLogo{
+    background: url("../img/cake.png");
+    background-size: 95px 88px;
+    width: 10px;
+    height: 20px;;
+    padding: 40px;
+    margin: 20px 15px;
+}
+.nav{
+    text-transform: uppercase;
+}
+.nav__link{
+    display: inline-block;
+    vertical-align:top;
+    text-align: right;
+    color: #fff;
+    text-decoration: none;
+    margin:  50px 15px;
+    transition: color .3s linear;
+}
+.nav__link:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
 .intro{
     background: url("../img/front_a.jpg")center no-repeat;
     height: 100vh;
@@ -39,14 +72,7 @@ h1,h2,h3,h4,h5,h6{
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
-.header__inner{
-    display: flex;
-    justify-content: space-between;
-}
-.header{
-    width: 100%;
-    position: absolute;
-}
+
 .logo{
     font-size: 110px;
     position: absolute;
@@ -54,30 +80,6 @@ h1,h2,h3,h4,h5,h6{
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
-}
-.nav{
-    text-transform: uppercase;
-}
-.nav__link{
-    display: inline-block;
-    vertical-align:top;
-    text-align: right;
-    /*margin: 0 15px;*/
-    color: #fff;
-    text-decoration: none;
-    margin:  50px 15px;
-    transition: color .3s linear;
-}
-.nav__link:hover{
-    color: rgba(0, 0, 0, 0.4);
-}
-.imLogo{
-    background: url("../img/cake.png");
-    background-size: 95px 88px;
-    width: 10px;
-    height: 20px;;
-    padding: 40px;
-    margin: 20px 15px;
 }
 .el{
     background: #79aec8;
@@ -109,7 +111,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .back__header__inner{
     width: 100%;
-    height: 90%;
+    height: 100%;
     max-width: 700px;
     display: flex;
     justify-content: space-between;
