@@ -10,7 +10,7 @@ urlpatterns = [
 ]
 # Add Django site authentication urls (for login, logout, password management)
 urlpatterns += [
-    path('login', views.registration),
+    path('registration', views.registration),
 ]
 
 
