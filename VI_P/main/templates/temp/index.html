@@ -37,7 +37,7 @@
         </div>
 
         <svg id="demo-svg" width="1" height="1">
-    <path fill="none" d="M 209 116 Q 201 146 274 208 Q 374 232 459 207 Q 543 165 544 119 "></path>
+    <path fill="none" d="M 209 116 Q 200 178 274 208 Q 374 232 459 207 Q 550 185 544 119 "></path>
 </svg>
         <div class="container">
             <div class="intro__inner">
@@ -60,7 +60,7 @@
         translateY: path('y'),
         rotate: path('angle'),
         easing: 'linear',
-        duration: 4015,
+        duration: 4017,
         direction: 'alternate',
         loop: true,
 });
@@ -72,7 +72,8 @@
   endDelay: 1000,
   easing: 'easeInOutQuad',
   direction: 'alternate',
-  loop: true
+  loop: true,
+  delay: 1,
 })
     .add({ targets: '.logo',  color: 'rgb(255,255,255)' }, 0)
 </script>
