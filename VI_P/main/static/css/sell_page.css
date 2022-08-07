@@ -135,7 +135,6 @@ body{
 }
 
 .text-form{
-
     max-width: 100px;
     max-height: 500px;
     width: 100%;
@@ -152,10 +151,10 @@ input[type=text] {
   font-family:inherit;
   font-size: inherit;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  border-color: #4676D7;
-    margin: 10px;
+  margin: 10px;
   color: #4676D7;
   background: rgba(27, 41, 77, 0.3);
+  border: 0
 }
 .submit {
     font-family: 'Righteous', cursive;
@@ -164,9 +163,10 @@ input[type=text] {
     color: #79aec8;
     text-decoration: none;
     transition: color .3s linear;
+    margin-left: 10px;
 }
 .submit:hover {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgb(255, 0, 0);
 }
 
 .products{
