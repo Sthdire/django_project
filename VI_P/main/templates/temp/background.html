@@ -9,42 +9,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style_a.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sell_page.css' %}">
     <link rel="shortcut icon" href="{%static 'img/champ.ico' %}" />
-    <script src="{% static '/scripts/anime.min.js' %}"></script>
     <title>Document</title>
 </head>
 <body>
-<div class="header">
-        <div class="container">
-            <div class="header__inner">
-                <a class="imLogo" href="/"></a>
-                <div class="nav">
-                    <a class="nav__link" href="/profile">Profile</a>
-                    <div class="link__text">Background</div>
-                    <a class="nav__link" href="registration">Registration</a>
-                </div>
-        </div>
-        </div>
-</div>
     <div class="intro">
-         <div class="back__header">
-            <div class="back__header__inner">
+        <header>
+            <div class="header">
+                <div class="container">
+                    <div class="header__inner">
 
+                        <a class="imLogo" href="/"></a>
+
+                        <div class="nav">
+                            <a class="nav__link" href="/profile">Profile</a>
+                            <a class="link__text">Background</a>
+                            <a class="nav__link" href="/reg">Registration</a>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </header>
+
+        <main>
+            <div class="sell mb-3">
+                <div class="col">
+                    <div class="sell-card">
+                        <div class="text-form">
+                            <form method="post">{% csrf_token %}
+                                <table>
+                                    <tr>
+                                        <td><input type="text" name="address" size="15" placeholder="Address"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="index" size="8" placeholder="Index"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="entrance" size="8" placeholder="Entrance"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="floor" size="8" placeholder="Floor"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="comment" size="8" placeholder="Comment"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="submit" class="submit" value="delivery"></td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                        <div class="products">
+                            Products:
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
     </div>
-<script>
-    anime({
-  targets: '.el',
-  translateX: 215,
-  direction: 'alternate',
-  loop: true,
-  duration: 2500,
-  easing: 'easeInOutSine'
-});
-</script>
-
 </body>
 </html>

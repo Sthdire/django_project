@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+/*delete scroll bar*/
+body{
+    overflow: hidden;
+}
+
+/*define size of element containers*/
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+/*main class with background img*/
+.intro{
+    background: url("../img/front_a.jpg")center no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+/*main header class*/
+.header{
+    width: 100%;
+    position: absolute;
+    font-family: 'Righteous', cursive;
+    color: #79aec8;
+    z-index: 100;
+}
+
+/*create header container 1200px*/
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*set item locating*/
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*create logo in header*/
+.imLogo{
+    background: url("../img/cake.png");
+    background-size: 95px 88px;
+    width: 10px;
+    height: 20px;;
+    padding: 40px;
+    margin: 20px 15px;
+}
+
+/*contain header links*/
+.nav{
+    text-transform: uppercase;
+}
+
+/*links form*/
+.nav__link{
+    display: inline-block;
+    vertical-align:top;
+    text-align: right;
+    color: #fff;
+    text-decoration: none;
+    margin:  50px 15px;
+    transition: color .3s linear;
+}
+
+/*sel color on hover*/
+.nav__link:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/*set now-using button in header as text*/
+.link__text{
+    display: inline-block;
+    vertical-align:top;
+    text-align: right;
+    color: black;
+    text-decoration: none;
+    margin:  50px 15px;
+
+    transition: color .3s linear;
+}
+
+/*main body class*/
+.sell{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.mb-3{
+    margin-bottom: 1rem!important;
+}
+
+/*centring body texts*/
+.text-center {
+    text-align: center!important;
+}
+
+/*class for body sell view*/
+.col{
+    flex: 100%;
+    height: 10em;
+    position: relative
+}
+
+.sell-card{
+    background: rgba(98, 138, 231, 0.3);
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1000px;
+    max-height: 1000px;
+    height: 170%;
+    width: 100%;
+}
+
+.text-form{
+    font-family: 'Righteous', cursive;
+    max-width: 100px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    position: absolute;               /* 2 */
+    top: 50%;                         /* 3 */
+    transform: translate(0, -50%);
+    margin-left: 10px;
+}
+
+input[type=text] {
+  border-radius:10px;
+  font-family:inherit;
+  font-size: inherit;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-color: #4676D7;
+  color: #4676D7;
+  background: rgba(27, 41, 77, 0.3);
+}
+.submit {
+    font-family: 'Righteous', cursive;
+    border: 0;
+    background: rgba(98, 138, 231, 0);
+    color: rgba(0, 4, 255, 0.5);
+    text-decoration: none;
+    transition: color .3s linear;
+}
+.submit:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.products{
+    max-width: 1000px;
+    width: 50%;
+    margin-left: 500px;
+}
