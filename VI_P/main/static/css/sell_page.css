@@ -131,6 +131,7 @@ body{
 }
 
 .text-form{
+    font-family: 'Righteous', cursive;
     max-width: 100px;
     max-height: 500px;
     width: 100%;
@@ -147,26 +148,20 @@ input[type=text] {
   font-family:inherit;
   font-size: inherit;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-    border-color: #4676D7;
-    color: #4676D7;
+  border-color: #4676D7;
+  color: #4676D7;
+  background: rgba(27, 41, 77, 0.3);
 }
 .submit {
-  appearance: none;
-  border: 0;
-  border-radius: 5px;
-  background: #4676D7;
-  color: #fff;
-  padding: 8px 8px;
-  font-size: 16px;
-  min-width: 100px;
+    font-family: 'Righteous', cursive;
+    border: 0;
+    background: rgba(98, 138, 231, 0);
+    color: rgba(0, 4, 255, 0.5);
+    text-decoration: none;
+    transition: color .3s linear;
 }
-.c-button:hover {
-  background: #1d49aa;
-}
-
-.c-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px #cbd6ee;
+.submit:hover {
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .products{
