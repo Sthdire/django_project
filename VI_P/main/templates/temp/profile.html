@@ -33,7 +33,11 @@
             <div class="nav">
                 <div class="link__text">Profile</div>
                 <a class="nav__link" href="/background">Background</a>
-                <a class="nav__link" href="registration">Registration</a>
+                {% if request.user.is_authenticated %}
+                <a class="nav__link" href="/logout">Logout</a>
+                {% else %}
+                <a class="nav__link" href="/reg">Registration</a>
+                {% endif %}
             </div>
         </div>
         </div>

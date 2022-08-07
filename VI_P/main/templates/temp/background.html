@@ -12,6 +12,25 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/sell_page.css' %}">
     <link rel="shortcut icon" href="{%static 'img/champ.ico' %}" />
     <title>Document</title>
+      <style>
+   [data-tooltip] {
+    position: relative; /* Относительное позиционирование */
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; top: 0; /* Положение подсказки */
+    background: rgba(161,21,207, 0); /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+   }
+   [data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 100%; /* Положение подсказки */
+   }
+  </style>
 </head>
 <body>
     <div class="intro">
@@ -25,7 +44,11 @@
                         <div class="nav">
                             <a class="nav__link" href="/profile">Profile</a>
                             <a class="link__text">Background</a>
-                            <a class="nav__link" href="/reg">Registration</a>
+                            {% if request.user.is_authenticated %}
+                                <a class="nav__link" href="/logout">Logout</a>
+                            {% else %}
+                                <a class="nav__link" href="/reg">Registration</a>
+                            {% endif %}
 
                         </div>
                     </div>
@@ -57,7 +80,14 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="submit" class="submit" value="delivery">
+                                            {% if request.user.is_authenticated %}
+                                                <input type="submit" class="submit" value="delivery">
+                                            {% else %}
+                                                <style></style>
+                                                    <p data-tooltip="tap to login">
+                                                        <a href="/reg" class="submit">delivery</a>
+                                                    </p>
+                                            {% endif %}
                                         </td>
                                     </tr>
                                 </table>

@@ -156,13 +156,14 @@ input[type=text] {
   background: rgba(27, 41, 77, 0.3);
   border: 0
 }
+
 .submit {
     font-family: 'Righteous', cursive;
     border: 0;
     color: #79aec8;
     text-decoration: none;
     overflow: hidden;
-    background: linear-gradient(to right, #436b06, #8ecc3f 50%, #8e9f4b 50%);
+    background: linear-gradient(to right, #791a42, #9170cc 50%, rgba(2, 6, 161, 0.51) 50%);
     margin-left: 10px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -179,3 +180,5 @@ input[type=text] {
     width: 50%;
     margin-left: 500px;
 }
+
+
