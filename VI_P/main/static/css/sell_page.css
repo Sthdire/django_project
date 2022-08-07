@@ -182,3 +182,20 @@ input[type=text] {
 }
 
 
+   [data-tooltip] {
+    position: relative; /* Относительное позиционирование */
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; top: 0; /* Положение подсказки */
+    background: rgba(161,21,207, 0); /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+   }
+   [data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 100%; /* Положение подсказки */
+   }
