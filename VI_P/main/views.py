@@ -26,6 +26,7 @@ def registration(request):
         username = request.POST['username']
         password = request.POST['password']
         registrations(username=username, password=password)
+        return redirect('/')
     else:
         return render(request, 'auth/reg.html', {})
 

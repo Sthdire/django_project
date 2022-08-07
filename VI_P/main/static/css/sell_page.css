@@ -162,7 +162,7 @@ input[type=text] {
     color: #79aec8;
     text-decoration: none;
     overflow: hidden;
-    background: linear-gradient(to right, #63794d, #688f34 50%, #8e9f4b 50%);
+    background: linear-gradient(to right, #436b06, #8ecc3f 50%, #8e9f4b 50%);
     margin-left: 10px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

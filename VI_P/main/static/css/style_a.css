@@ -125,9 +125,10 @@ h1,h2,h3,h4,h5,h6{
 .intro__block{
     width: 1200px;
     height: 50%;
+    max-height: 503.5px;
     position: absolute;
+    top: 400px;
     left: 50%;
-    top: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
@@ -157,7 +158,7 @@ h1,h2,h3,h4,h5,h6{
 
 }
 .block__second{
-    width: 30%;
+    width: 360px;
     height: 500px;
     background: #fff;
     border-radius: 25%;
@@ -228,10 +229,37 @@ h1,h2,h3,h4,h5,h6{
     left: 0;
 }
 .desert{
-    background: url("../img/choko-ekler.jpg") center no-repeat;
-    width: 300px;
+    width: 100%;
     height: 300px;
-    border-radius: 30%;
+    border-radius: 25% 25% 0 0;
+
+}
+.a{
+    background: url("../img/choko-ekler.jpg") center no-repeat;
+    background-size: cover;
+
+}
+.b{
+    background: url("../img/napoleon.jpg") center no-repeat;
+    background-size: cover;
+
+}
+.c{
+    background: url("../img/cheesecake.jpg") center no-repeat;
+    background-size: cover;
+
+}
+.desert__name{
+    color: #757106;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    top: 70%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 
