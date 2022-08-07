@@ -159,14 +159,19 @@ input[type=text] {
 .submit {
     font-family: 'Righteous', cursive;
     border: 0;
-    background: rgba(98, 138, 231, 0);
     color: #79aec8;
     text-decoration: none;
-    transition: color .3s linear;
+    overflow: hidden;
+    background: linear-gradient(to right, #63794d, #688f34 50%, #8e9f4b 50%);
     margin-left: 10px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
 }
 .submit:hover {
-  color: rgb(255, 0, 0);
+    background-position: 0 100%;
 }
 
 .products{
