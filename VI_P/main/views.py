@@ -4,46 +4,47 @@ from django.shortcuts import render, redirect
 from .forms import UserRegistrationForm
 from .admin import registrations
 
-address = ""
-index = ""
-entrance = ""
-floor = ""
-comment = ""
 
 Cheese_cake = ''
 Eclair = ''
 Napoleon_cake = ''
+nap_amount = 0
+cheese_amount = 0
+eclair_amount = 0
+price = 0
 
 
 def main_render(request):
     return render(request, 'temp/index.html')
 
 
+
 def profile_render(request):
     global Cheese_cake
     global Eclair
     global Napoleon_cake
+    global nap_amount
+    global cheese_amount
+    global eclair_amount
+    global price
     if request.method == "POST":
         if request.POST.get('eclair'):
             Eclair = 'Eclair'
+            price += 160
+            eclair_amount += 1
         elif request.POST.get('cheese_cake'):
             Cheese_cake = 'Cheese cake'
+            price += 210
+            cheese_amount += 1
         elif request.POST.get('napoleon_cake'):
             Napoleon_cake = 'Napoleon cake'
+            price += 220
+            nap_amount += 1
 
     return render(request, 'temp/profile.html')
 
 
 def background_render(request):
-    global Cheese_cake
-    global Eclair
-    global Napoleon_cake
-
-    global address
-    global index
-    global entrance
-    global floor
-    global comment
 
     if request.method == "POST":
         address = request.POST['address']
@@ -58,7 +59,7 @@ def background_render(request):
             return redirect('/background')
 
     else:
-        return render(request, 'temp/background.html', {'Cheese_cake': Cheese_cake, 'Eclair': Eclair, 'Napoleon_cake': Napoleon_cake})
+        return render(request, 'temp/background.html', {'Cheese_cake': Cheese_cake, 'Eclair': Eclair, 'Napoleon_cake': Napoleon_cake, 'price': price, 'nap': nap_amount, 'cheese': cheese_amount, 'eclair': eclair_amount})
 
 
 def registration(request):

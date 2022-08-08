@@ -178,11 +178,83 @@ input[type=text] {
     max-width: 1000px;
     width: 50%;
     margin-left: 500px;
+    position: relative;
+    top: 20px;
 }
-.test1{
+.name__desert{
+    position: relative;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    color: #757106;
     max-width: 1000px;
     width: 50%;
+    margin-top: 10px;
     margin-left: 500px;
+    top: 20px;
 
+
+}
+.form{
+    position: relative;
+    margin: 10px;
+    top: 35px;
+    left: 42px;
+    transform: translate(-50%, -50%);
+
+}
+.price__block{
+    position: relative;
+    top: 10%;
+    left: 40%;
+    justify-content: space-between;
+    display: flex;
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+
+}
+.price__word{
+    position: relative;
+    text-align: right;
+    display: inline-block;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+}
+.price{
+    position: sticky;
+    text-align: left;
+    display: inline-block;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+}
+.nap__amount{
+    position: relative;
+    font-size: 20px;
+    color: #993300;
+    width: 20px;
+    height: 25px;
+    top:-35px;
+    left: 180px;
+
+}
+.cheese__amount{
+    position: relative;
+    font-size: 20px;
+    color: #993300;
+    width: 20px;
+    height: 25px;
+    top:-35px;
+    left: 180px;
+
+}
+.eclair__amount{
+    position: relative;
+    font-size: 20px;
+    color: #993300;
+    width: 20px;
+    height: 25px;
+    top:-35px;
+    left: 180px;
 
 }

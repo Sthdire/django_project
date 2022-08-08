@@ -189,7 +189,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .butt {
     border: 3px solid #79aec8;
-    border-radius: 30% 30% 30% 30% ;
+    border-radius: 30%;
     font-size: 30px;
     color: #79aec8;
     text-decoration: none;
