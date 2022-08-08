@@ -261,9 +261,16 @@ h1,h2,h3,h4,h5,h6{
     margin-right: -50%;
     transform: translate(-50%, -50%)
 }
+.desert__price{
+    color: #9b9606;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    top: 80%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 
-
-
-
-
-
+}

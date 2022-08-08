@@ -15,7 +15,6 @@
 </head>
 <body>
     <div class="intro">
-        <header>
             <div class="header">
                 <div class="container">
                     <div class="header__inner">
@@ -31,8 +30,6 @@
                     </div>
                 </div>
             </div>
-        </header>
-
         <main>
             <div class="sell mb-3">
                 <div class="col">
@@ -65,6 +62,11 @@
                         </div>
                         <div class="products">
                             Products:
+                        </div>
+                        <div class="test1">
+                            {% for val in values %}
+                            {{val}}
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
