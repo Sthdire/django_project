@@ -2,105 +2,108 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css');
 
 *{
-	font-family: 'Open Sans', 'sans-serif', 'FontAwesome';
-}
-body{
-    background: rgb(52, 56, 61);
-	padding: 80px;
-}
-h1{
-	color: rgb(255, 255, 255);
-	margin: 20px auto 0;
-	width: 200px;
-	text-align: center;
-}
-#wrapper{
-	position: absolute;
-	width: 320px;
-	left: 50%;
-	margin-left: -160px;
-	top: 50%;
-	margin-top: -75px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+    color: #79aec8;
+    line-height: 1.6;
 }
 
-/* === Sign in Form === */
-#signin {
-	height: 90px;
-	width: 300px;
-	border-radius: 8px;
-	position: relative;
+body{
+    overflow: hidden;
 }
-#signin::before {
-	display: block;
-	position: relative;
-	height: 2px;
-	background: rgb(52, 56, 61);
-	content: '';
-	top: 44px;
-	margin-left: 20px;
-	z-index: 1;
+
+.header{
+    width: 100%;
+    position: absolute;
 }
-#signin input:first-of-type{
-	border-top-right-radius: 8px;
-	border-top-left-radius: 8px;
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-#signin input:last-of-type{
-	border-bottom-right-radius: 8px;
-	border-bottom-left-radius: 8px;
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
 }
-#signin  input[type="text"], #signin  input[type="password"], #signin button[type="submit"]{
-	background: rgb(28, 30, 33);
-	box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
-	color: rgb(52, 56, 61);
+
+.imLogo{
+    background: url("../img/cake.png");
+    background-size: 95px 88px;
+    width: 10px;
+    height: 20px;;
+    padding: 40px;
+    margin: 20px 15px;
 }
-#signin  input[type="text"], #signin  input[type="password"]{
-	position: relative;
-	display: block;
-	width: 280px;
-	height: 45px;
-	border: 0;
-	outline: 0;
-	top: -2px;
-	padding: 0 0 0 20px;
-	font-weight: 700;
+
+.nav{
+    text-transform: uppercase;
 }
-#signin  input[type="text"]:focus, #signin  input[type="password"]:focus{
-	color: rgb(255, 255, 255);
+
+.nav__link{
+    display: inline-block;
+    vertical-align:top;
+    text-align: right;
+    color: #fff;
+    text-decoration: none;
+    margin:  50px 15px;
+    transition: color .3s linear;
 }
-#signin button[type="submit"]{
-	display: block;
-	position: absolute;
-	width: 52px;
-	height: 52px;
-	color: rgb(52, 56, 61);
-	border-radius: 50px;
-	outline: 0;
-	z-index: 2;
-	top: 19px;
-	right: -24px;
-	border: 6px solid rgb(52, 56, 61);
-	font-size: 25px;
-	text-indent: 0;
-	padding-left: 9px;
-	padding-bottom: 3px;
-	text-align: center;
+
+.nav__link:hover{
+    color: rgba(0, 0, 0, 0.4);
 }
-#signin button[type="submit"]:hover{
-	color: rgb(0, 126, 165);
-	text-shadow: 0 0 10px rgb(0, 126, 165);
-	cursor: pointer;
+
+.link__text{
+    display: inline-block;
+    vertical-align:top;
+    text-align: right;
+    color: black;
+    text-decoration: none;
+    margin:  50px 15px;
+    transition: color .3s linear;
 }
-#signin p {
-	color: rgb(79, 85, 97);
-	padding: 0 20px;
-	font-weight: 700;
-	font-size: 12px;
-	margin: 5px 0 0 0;
+
+.intro{
+    background: url("../img/front_a.jpg")center no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    -webkit-background-size: cover;
 }
-#signin p > a{
-	color: rgb(111, 119, 135);
-	text-decoration: none;
+
+.back__header{
+    background:rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height:42px;
+    position: absolute;
+    top: 100%;
+    transform: translate(0, -100%)
 }
-#signin p > a:hover{
-	border-bottom: 1px solid;
+
+.back__header__inner{
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, 0 );
+
+}
+
+.con{
+    position: absolute;
+	width: 320px;
+	top: 35%;
+	left: 38%;
+}
+
+.under_text{
+    font-family: 'Open Sans', 'sans-serif', 'FontAwesome';
+    color: black
 }
