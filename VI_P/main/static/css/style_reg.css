@@ -107,17 +107,13 @@ body{
     color: black;
     font-size: 15px;
 }
-.butt{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-}
+
 .reg__table{
     position: absolute;
     width: 500px;
     height: 500px;
     background: rgba(0,0,0,0.5);
-    top: 500px;
+    top: 400px;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
@@ -176,6 +172,17 @@ body{
     border-radius: 50%;
     top:160px;
     left:320px;
-
 }
 
+#link2{
+    color: black;
+    font-size: 13px;
+    position: absolute;
+    margin-right: -50%;
+
+    top:300px;
+    left: 310px;
+    text-decoration: none;
+    transform: translate(-50%, -50%);
+    transition: color .3s linear;
+}

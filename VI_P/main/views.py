@@ -19,7 +19,7 @@ def main_render(request):
 
 
 
-def profile_render(request):
+def products_render(request):
     global Cheese_cake
     global Eclair
     global Napoleon_cake
@@ -41,10 +41,10 @@ def profile_render(request):
             price += 220
             nap_amount += 1
 
-    return render(request, 'temp/profile.html')
+    return render(request, 'temp/products.html')
 
 
-def background_render(request):
+def basket_render(request):
     global Cheese_cake
     global Eclair
     global Napoleon_cake
@@ -66,10 +66,9 @@ def background_render(request):
 
             return redirect('/')
         else:
-            return redirect('/background')
-
+            return redirect('/basket')
     else:
-        return render(request, 'temp/background.html', {'Cheese_cake': Cheese_cake, 'Eclair': Eclair, 'Napoleon_cake': Napoleon_cake, 'price': price, 'nap': nap_amount, 'cheese': cheese_amount, 'eclair': eclair_amount})
+        return render(request, 'temp/basket.html', {'Cheese_cake': Cheese_cake, 'Eclair': Eclair, 'Napoleon_cake': Napoleon_cake, 'price': price, 'nap': nap_amount, 'cheese': cheese_amount, 'eclair': eclair_amount})
 
 
 def registration(request):

@@ -20,8 +20,8 @@
         <div class="header__inner">
             <a class="imLogo" href="/"></a>
             <div class="nav">
-                <a class="nav__link" href="/profile">Profile</a>
-                <a class="nav__link" href="/background">Background</a>
+                <a class="nav__link" href="/products">Products</a>
+                <a class="nav__link" href="/basket">Basket</a>
                 {% if request.user.is_authenticated %}
                 <a class="nav__link" href="/logout">Logout</a>
                 {% else %}
@@ -31,23 +31,21 @@
         </div>
     </div>
 </div>
-    <div class="intro">
-        <div class="back__header">
-            <div class="back__header__inner">
+<div class="intro">
+    <div class="back__header">
+        <div class="back__header__inner"></div>
+    </div>
 
-            </div>
-        </div>
-
-        <svg id="demo-svg" width="1" height="1">
-            <path fill="none" d="M 209 116 Q 200 178 274 208 Q 374 232 459 207 Q 550 185 544 119 "></path>
-        </svg>
-        <div class="container">
-            <div class="intro__inner">
-                <div class="logo" >Montherat</div>
-                <div class="el"></div>
-            </div>
+    <svg id="demo-svg" width="1" height="1">
+        <path fill="none" d="M 209 116 Q 200 178 274 208 Q 374 232 459 207 Q 550 185 544 119 "></path>
+    </svg>
+    <div class="container">
+        <div class="intro__inner">
+            <div class="logo" >Montherat</div>
+            <div class="el"></div>
         </div>
     </div>
+</div>
 
 <script>
     let path = anime.path('#demo-svg path')
@@ -65,18 +63,13 @@
 </script>
 
 <script>
-
-    var colorsExamples = anime.timeline({
+  var colorsExamples = anime.timeline({
   endDelay: 1000,
   easing: 'easeInOutQuad',
   direction: 'alternate',
   loop: true,
-  delay: 1,
-})
-    .add({ targets: '.logo',  color: 'rgb(255,255,255)' }, 0)
+  delay: 1,})
+  .add({ targets: '.logo',  color: 'rgb(255,255,255)' }, 0)
 </script>
-
-
-
 </body>
 </html>

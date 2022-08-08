@@ -19,18 +19,15 @@
             <div class="header">
                 <div class="container">
                     <div class="header__inner">
-
                         <a class="imLogo" href="/"></a>
-
                         <div class="nav">
-                            <a class="nav__link" href="/profile">Profile</a>
-                            <a class="link__text">Background</a>
+                            <a class="nav__link" href="/products">Products</a>
+                            <a class="link__text">Basket</a>
                             {% if request.user.is_authenticated %}
                                 <a class="nav__link" href="/logout">Logout</a>
                             {% else %}
                                 <a class="nav__link" href="/reg">Registration</a>
                             {% endif %}
-
                         </div>
                     </div>
                 </div>
@@ -41,9 +38,7 @@
                     <div class="sell-card">
                         <div class="text-form">
                             <form method="post">{% csrf_token %}
-                                <div class="form">
-                                    Form:
-                                </div>
+                                <div class="form">Form:</div>
                                 <table>
                                     <tr>
                                         <td><input type="text" name="address" size="15" placeholder="Address"></td>
@@ -75,9 +70,7 @@
                                 </table>
                             </form>
                         </div>
-                        <div class="products">
-                            Products:
-                        </div>
+                        <div class="products">Products:</div>
                         <div class="name__desert">
                             {{Cheese_cake}}
                             {% if cheese != 0 %}
@@ -106,7 +99,6 @@
                 </div>
             </div>
         </main>
-
     </div>
 </body>
 </html>

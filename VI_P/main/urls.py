@@ -4,10 +4,8 @@ from . import views
 
 urlpatterns = [
     path('', views.main_render),
-    path('profile', views.profile_render),
-    path('background', views.background_render),
-
-
+    path('products', views.products_render),
+    path('basket', views.basket_render),
 ]
 # Add Django site authentication urls (for login, logout, password management)
 urlpatterns += [
