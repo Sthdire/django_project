@@ -45,6 +45,13 @@ def profile_render(request):
 
 
 def background_render(request):
+    global Cheese_cake
+    global Eclair
+    global Napoleon_cake
+    global nap_amount
+    global cheese_amount
+    global eclair_amount
+    global price
 
     if request.method == "POST":
         address = request.POST['address']
@@ -54,6 +61,9 @@ def background_render(request):
         comment = request.POST['comment']
 
         if address and index and entrance and floor:
+            Cheese_cake, Eclair, Napoleon_cake = "", "", ""
+            nap_amount, cheese_amount, eclair_amount, price = 0, 0, 0, 0
+
             return redirect('/')
         else:
             return redirect('/background')
