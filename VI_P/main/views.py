@@ -1,8 +1,9 @@
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from .forms import UserRegistrationForm
 from .admin import registrations
+
 
 address = ""
 index = ""
@@ -20,9 +21,11 @@ def main_render(request):
 
 
 def profile_render(request):
+    global Cheese_cake
+    global Eclair
+    global Napoleon_cake
+
     return render(request, 'temp/profile.html')
-
-
 def background_render(request):
     global address
     global index
@@ -68,3 +71,8 @@ def login_page(request):
             return redirect('/login')
     else:
         return render(request, 'auth/login.html', {})
+
+
+def logout_page(request):
+    logout(request)
+    return render(request, 'temp/index.html')
