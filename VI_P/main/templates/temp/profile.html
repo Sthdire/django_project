@@ -51,7 +51,9 @@
                             <div class="desert__name">Cheese cake</div>
                             <div class="desert__price">210 rub/ peace</div>
                             <div class="dws">
-                                <input type="submit" id="buttonId1" onclick="('print_p')"   class="butt" value="BUY">
+                                <form method="post">{% csrf_token %}
+                                    <input type="submit" id="buttonId1" name="cheese_cake" class="butt" value="BUY">
+                                </form>
                             </div>
                         </div>
                         <div class="block__second">
@@ -59,7 +61,9 @@
                             <div class="desert__name">Eclair</div>
                             <div class="desert__price">160 rub/ for one </div>
                             <div class="dws">
-                                <input type="submit" id="buttonId2"   class="butt" value="BUY">
+                                <form method="post">{% csrf_token %}
+                                    <input type="submit" id="buttonId2" name="eclair" class="butt" value="BUY">
+                                </form>
                             </div>
                         </div>
                         <div class="block__third">
@@ -67,7 +71,9 @@
                             <div class="desert__name">Napoleon cake</div>
                             <div class="desert__price">220 rub/ peace</div>
                             <div class="dws">
-                               <input type="submit" id="buttonId3"   class="butt" onclick="" value="BUY">
+                                <form method="post">{% csrf_token %}
+                                    <input type="submit" id="buttonId3" name="napoleon_cake" class="butt" onclick="" value="BUY">
+                                </form>
                             </div>
                         </div>
                     </div>

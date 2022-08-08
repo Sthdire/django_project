@@ -4,16 +4,15 @@ from django.shortcuts import render, redirect
 from .forms import UserRegistrationForm
 from .admin import registrations
 
-
 address = ""
 index = ""
 entrance = ""
 floor = ""
 comment = ""
 
-Cheese_cake = 0
-Eclair = 0
-Napoleon_cake = 0
+Cheese_cake = ''
+Eclair = ''
+Napoleon_cake = ''
 
 
 def main_render(request):
@@ -24,14 +23,28 @@ def profile_render(request):
     global Cheese_cake
     global Eclair
     global Napoleon_cake
+    if request.method == "POST":
+        if request.POST.get('eclair'):
+            Eclair = 'Eclair'
+        elif request.POST.get('cheese_cake'):
+            Cheese_cake = 'Cheese cake'
+        elif request.POST.get('napoleon_cake'):
+            Napoleon_cake = 'Napoleon cake'
 
     return render(request, 'temp/profile.html')
+
+
 def background_render(request):
+    global Cheese_cake
+    global Eclair
+    global Napoleon_cake
+
     global address
     global index
     global entrance
     global floor
     global comment
+
     if request.method == "POST":
         address = request.POST['address']
         index = request.POST['index']
@@ -45,7 +58,7 @@ def background_render(request):
             return redirect('/background')
 
     else:
-        return render(request, 'temp/background.html', {'values': [Cheese_cake]})
+        return render(request, 'temp/background.html', {'Cheese_cake': Cheese_cake, 'Eclair': Eclair, 'Napoleon_cake': Napoleon_cake})
 
 
 def registration(request):
