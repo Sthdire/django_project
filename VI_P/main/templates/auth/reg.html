@@ -39,22 +39,30 @@
 </div>
 
 <main>
-    <div class="con">
-        <form method="post" class="form" class autocomplete="off">{% csrf_token %}
-            <table>
-                <tr>
-                    <td><input type="text" class="username" name="username" placeholder="username"></td>
-                </tr>
-                <tr>
-                    <td><input type="password" class="password" name="password" placeholder="password"></td>
-                </tr>
-                <tr>
-                    <td><p class="under_text">if you registered <a href="/login" class="under_text">click here</a></td></p>
-                    <td><button type="submit">&#xf0da;</button>
-                </tr>
-            </table>
-        </form>
-    </div>
+    <form method="POST">
+        <table class="reg__table">
+            <tr>
+                <td>
+                    <input type="text" id="username" name="username" placeholder="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="password" name="password" placeholder="password">
+                </td>
+            </tr>
+            <tr>
+                <td><p id="text">if you registered</p>
+                 <a id="link" href="/login">click here</a>
+                </td>
+                <td><button id="butt" class="butt" type="submit">&#5125;</button>
+            </tr>
+        </table>
+
+
+    </form>
+
+
 </main>
 
 </body>
